@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HTML Presentation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="prettify.css" />
+</head>
+<body>
+
+<div id="loading">
+    <h2>LOADING</h2>
+</div>
+
+<div id="content">
+    <article id="usage" data-bg="img/rainbow.jpg">
+        <h2>Pathway Ranking</h2>
+        <ul>
+            <li>Back: <code>&#x2190;</code>, <code>&#x2191;</code> or <code>PgUp</code>.</li>
+            <li>Next: <code>&#x2192;</code>, <code>&#x2193;</code>, <code>PgDn</code> or <code>&#x3000;&#x3000;&#x3000;Space&#x3000;&#x3000;&#x3000;</code>.</li>
+            <li>First: <code>Home</code>.</li>
+            <li>Last: <code>End</code>.</li>
+        </ul>
+
+        <div class="build">
+            <p>Please note that currently only <a href="http://www.google.com/chrome/">Chrome</a> and <a href="http://www.apple.com/safari/">Safari</a> are supported.</p>
+        </div>
+    </article>
+    <article id="finish" data-bg="img/heart.jpg" data-type="fixed">
+        <ul>
+            <li>Please input your score for each graph(range 0 - 10).</li>
+            <li>If you are ready, you can click the button below.
+                <button id="ButtonSubmit" onclick="beginTask()" type="button" >Begin</button></li>
+        </ul>
+    </article>
+</div>
+<script>
+    function beginTask() {
+        window.location.replace("group1.html");
+    }
+</script>
+<script src="prettify.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

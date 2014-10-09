@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Pathway Ranking</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="prettify.css" />
+    <link href="./jqueryLib/jquery-ui-1.10.4.css" rel="stylesheet" type="text/css" />
+    <!--Jquery Lib-->
+    <script src="./jqueryLib/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="./jqueryLib/jquery-ui-1.10.4.js" type="text/javascript"></script>
+    <script src="./jqueryLib/jquery.ui.position.js" type="text/javascript"></script>
+</head>
+<body>
+
+	<div id="loading">
+		<h2>LOADING</h2>
+	</div>
+
+	<div id="content">
+		<article id="title" data-bg="img/heart.jpg">
+			<h1>Group8: eNOS activation </h1>
+		</article>
+		<article id="graph801" data-bg="img/heart.jpg" data-type="parallax">
+            <img src="img/Gluconeogenesis.png" alt="" >
+            <table>
+                <tr>
+                    <td>Score:</td>
+                    <td>
+                        <input type="number"  value=""  id="graph8_01"  title="Input range is between 0 and 10">
+                         </td>
+                </tr>
+            </table>
+        </article>
+		<article id="graph802" data-bg="img/heart.jpg" data-type="fixed">
+            <img src="img/Gluconeogenesis_Alyson Weiss_1 18 02 PM 17 9 2014.png" alt="" >
+            <table>
+                <tr>
+                    <td>Score:</td>
+                    <td>
+                        <input type="number"  value=""  id="graph8_02"  title="Input range is between 0 and 10">
+                    </td>
+                </tr>
+            </table>
+            <!--<div>-->
+                <!--<p>You are finished this group, please go to next group</p>-->
+                <!--<button id="ButtonSubmit" onclick="postContactToGoogle()"-->
+                        <!--type="button" >Next</button>-->
+            <!--</div>-->
+		</article>
+        <article id="graph803" data-bg="img/heart.jpg" data-type="fixed">
+            <img src="img/Gluconeogenesis_Waler Drake_4 27 44 PM 25 9 2014.png" alt="" >
+            <table>
+                <tr>
+                    <td>Score:</td>
+                    <td>
+                        <input type="number"  value=""  id="graph8_03"  title="Input range is between 0 and 10">
+                    </td>
+                </tr>
+            </table>
+            <!--<div>-->
+            <!--<p>You are finished this group, please go to next group</p>-->
+            <!--<button id="ButtonSubmit" onclick="postContactToGoogle()"-->
+            <!--type="button" >Next</button>-->
+            <!--</div>-->
+        </article>
+        <article id="finish" data-bg="img/heart.jpg" data-type="fixed">
+            <div>
+                <h3>You are finished this group, please go to next group</h3>
+                <button id="ButtonSubmit" onclick="postContactToGoogle()"
+                        type="button" >Next</button>
+            </div>
+        </article>
+	</div>
+    <script>
+        function postContactToGoogle() {
+            var graph8_01 = $('#graph8_01').val(),
+                    graph8_02 = $('#graph8_02').val(),
+                    graph8_03 = $('#graph8_03').val();
+            $.ajax({
+                url: "https://docs.google.com/forms/d/1YAWsjvX7RDkfLWFGzm1Q45_TSYRYnEuMI4_YThNcHrs/formResponse",
+                data: {
+                    "entry.2110611819": graph8_01,
+                    "entry.592778836": graph8_02,
+                    "entry.167537410": graph8_03
+                },
+                type: "POST",
+                dataType: "xml",
+                statusCode: {
+                    0: function () {
+                        window.location.replace("group9.html");
+                    },
+                    200: function () {
+                        window.location.replace("group9.html");
+                    }
+                }
+            });
+        }
+    </script>
+	<script src="prettify.js"></script>
+	<script src="script.js"></script>
+
+</body>
+</html>
