@@ -16,3 +16,7 @@ online Graph Ranking experiment
 + Last  : `End`.
 
 + Input score for each graph
+
+**Demo**
+
++ Please visit [Pathway study](http://www.csee.umbc.edu/~yongnan/PathWay-graph-ranking-study/)
